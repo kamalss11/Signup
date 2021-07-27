@@ -19,30 +19,31 @@
         <div class="flx">
             <div class="fields">
                 <label for="fn">First name (required)</label>
-                <input type="text" id="fn" placeholder="First name">
+                <input type="text" id="fn" placeholder="First name" required>
             </div>
     
             <div class="fields">
                 <label for="ln">Last name (required)</label>
-                <input type="text" id="ln" placeholder="Last name">
+                <input type="text" id="ln" placeholder="Last name" required>
             </div>
         </div>
 
         <div class="fields">
             <label for="ph">Enter your phone number (required)</label>
             <div class="num">
-                <div class="no">+91</div><input type="text" id="ph" placeholder="Phone number"><i class="fas fa-mobile-alt"></i>
+                <div class="no">+91</div><input type="text" id="ph" placeholder="Phone number" required><i class="fas fa-mobile-alt"></i>
             </div>
+            <p class="er">The phone number is invalid</p>
         </div>
 
         <div class="fields">
             <label for="ema">Enter your email (required)</label>
-            <input type="text" id="ema" placeholder="Email"><i class="fas fa-envelope"></i>
+            <input type="email" id="ema" placeholder="Email" required><i class="fas fa-envelope"></i>
         </div>
 
         <div class="fields">
             <label for="pss">Enter a password (required)</label>
-            <input type="password" id="pss" placeholder="Password"><i class="fas fa-lock"></i>
+            <input type="password" id="pss" placeholder="Password" required><i class="fas fa-lock"></i>
         </div>
 
         <div class="btn">
@@ -50,5 +51,7 @@
             <p>By clicking "Sign Up", you agree to Uber's Terms of Use and acknowledge you have read the Privacy Policy. You also consent to receive calls or SMS messages, including by automated dialer, from Uber and its affiliates to the number you provide for informational and/or marketing purposes. Consent to receive marketing messages is not a condition to use Uber’s services. You understand that you may opt out by texting “STOP” to 89203.</p>
         </div>
     </form>
+
+    <script src="JS/js.js"></script>
 </body>
 </html>
