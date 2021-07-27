@@ -103,3 +103,20 @@ form .btn button{
 form .btn p{
     font-size: 10px;
 }
+
+form .fields .er{
+    font-size: 12px;
+    padding: 3px 0;
+    color: red;
+    display: none;
+}
+
+form .fields .er.active{
+    display: block;
+}
+
+@media(max-width: 700px){
+    form{
+        width: 95%;
+    }
+}
