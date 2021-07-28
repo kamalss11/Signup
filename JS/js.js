@@ -4,6 +4,8 @@ var phnum = document.querySelector("#ph")
 var email = document.querySelector("#ema")
 var password = document.querySelector("#pss")
 var er = document.querySelector(".er")
+var sbtn = document.querySelector("#sbt")
+var form = document.querySelector("#form")
 
 phnum.addEventListener("blur",function(){
     let ph = /\d[0-9]$/
@@ -16,4 +18,8 @@ phnum.addEventListener("blur",function(){
     else{
         er.classList.remove("active")
     }
+})
+
+sbtn.addEventListener("click",function(e){
+    e.preventDefault()
 })
