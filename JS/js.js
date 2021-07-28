@@ -21,5 +21,4 @@ phnum.addEventListener("blur",function(){
 })
 
 sbtn.addEventListener("click",function(e){
-    e.preventDefault()
 })
