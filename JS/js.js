@@ -21,4 +21,5 @@ phnum.addEventListener("blur",function(){
 })
 
 sbtn.addEventListener("click",function(e){
+    form.reset()
 })
