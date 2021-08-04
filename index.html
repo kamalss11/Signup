@@ -13,39 +13,38 @@
     <div class="bg-img">
         <img src="Images/DOJO.png">
     </div>
-    <script type="text/javascript">var submitted=false;</script>
-    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="if(submitted) {window.location='./index.html';}"></iframe>
-    <form method="post" id="form"
-    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdAFtvqCAlYUVQ4h0iayoHxM-irmzmp6oDrq78N586eQ4JCzQ/formResponse" target="hidden_iframe"> 
+    <!-- <script type="text/javascript">var submitted=false;</script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="if(submitted) {window.location='./index.html';}"></iframe> -->
+    <form method="post" id="forms" name="google-sheet"> 
         <h2>Sign Up with DOJO</h2>
         <div class="flx">
             <div class="fields">
                 <label for="fn">First name (required)</label>
-                <input type="text" id="fn" placeholder="First name" name="entry.2092238618" required>
+                <input type="text" id="fn" placeholder="First name" name="First Name" required>
             </div>
     
             <div class="fields">
                 <label for="ln">Last name (required)</label>
-                <input type="text" id="ln" placeholder="Last name" name="entry.479301265" required>
+                <input type="text" id="ln" placeholder="Last name" name="Last Name" required>
             </div>
         </div>
 
         <div class="fields">
             <label for="ph">Enter your phone number (required)</label>
             <div class="num">
-                <div class="no">+91</div><input type="text" id="ph" placeholder="Phone number" required name="entry.908865207"><i class="fas fa-mobile-alt"></i>
+                <div class="no">+91</div><input type="text" id="ph" placeholder="Phone number" required name="Phone number"><i class="fas fa-mobile-alt"></i>
             </div>
             <p class="er">The phone number is invalid</p>
         </div>
 
         <div class="fields">
             <label for="ema">Enter your email (required)</label>
-            <input type="email" id="ema" placeholder="Email" name="entry.1556369182" required><i class="fas fa-envelope"></i>
+            <input type="email" id="ema" placeholder="Email" name="Email" required><i class="fas fa-envelope"></i>
         </div>
 
         <div class="fields">
             <label for="pss">Enter a password (required)</label>
-            <input type="password" name="entry.455286272" id="pss" placeholder="Password" required><i class="fas fa-lock"></i>
+            <input type="password" name="Password" id="pss" placeholder="Password" required><i class="fas fa-lock"></i>
         </div>
 
         <div class="btn">
@@ -53,7 +52,19 @@
             <p>By clicking "Sign Up", you agree to Uber's Terms of Use and acknowledge you have read the Privacy Policy. You also consent to receive calls or SMS messages, including by automated dialer, from Uber and its affiliates to the number you provide for informational and/or marketing purposes. Consent to receive marketing messages is not a condition to use Uber’s services. You understand that you may opt out by texting “STOP” to 89203.</p>
         </div>
     </form>
-
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyFZjF9L_-wCjWi6O3YdZYvJ4puuSyrBZbbrgQSWYCGpKY999nBrrlmiAv1Acu0Nel3kw/exec'
+        const form = document.forms['google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
     <script src="JS/js.js"></script>
 </body>
 </html>

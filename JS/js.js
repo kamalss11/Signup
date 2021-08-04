@@ -5,7 +5,7 @@ var email = document.querySelector("#ema")
 var password = document.querySelector("#pss")
 var er = document.querySelector(".er")
 var sbtn = document.querySelector("#sbt")
-var form = document.querySelector("#form")
+// var forms = document.querySelector("#form")
 
 phnum.addEventListener("blur",function(){
     let ph = /\d[0-9]$/
@@ -21,8 +21,4 @@ phnum.addEventListener("blur",function(){
 })
 
 sbtn.addEventListener("click",function(e){
-    setInterval(function(){
-        form.reset()
-        },2000
-    )
 })
